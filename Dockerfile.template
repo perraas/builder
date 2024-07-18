@@ -1,0 +1,11 @@
+FROM python:3.9-slim
+
+# Install necessary tools
+RUN apt-get update && apt-get install -y bash
+
+# Copy the script into the container
+COPY scripts/$SCRIPT_NAME /usr/local/bin/$SCRIPT_NAME
+RUN chmod +x /usr/local/bin/$SCRIPT_NAME
+
+# Define the entrypoint script
+ENTRYPOINT ["/usr/local/bin/$SCRIPT_NAME"]

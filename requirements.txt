@@ -1,0 +1,10 @@
+redis
+celery
+kubernetes
+fastapi
+sqlalchemy
+pydantic
+uvicorn
+podman
+docker
+pandas
